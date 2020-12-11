@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import * as mongoose from 'mongoose';
+import * as bcrypt from 'bcrypt';
 
 export const UserSchema = new mongoose.Schema(
     {
@@ -23,3 +24,33 @@ export const UserSchema = new mongoose.Schema(
     }
     
 );
+
+
+UserSchema.pre('save', async function(next: mongoose.HookNextFunction) {
+    try {
+        
+        if(this.isModified('password')){
+            const hashed = await bcrypt.hash(this['password'], 16);
+            this['password'] = hashed;
+        }
+        next();
+
+    } catch (error) {
+        next(error);
+    }
+
+    // try {
+        
+    //     if(!this.isModified('password')){
+    //         return next();
+    //     }
+
+    //     const hashed = await bcrypt.hash(this['password'], 16);
+
+    //     this['password'] = hashed;
+    //     next();
+
+    // } catch (error) {
+    //     next(error);
+    // }
+});
