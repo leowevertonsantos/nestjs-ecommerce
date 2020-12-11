@@ -4,7 +4,7 @@ import { Document } from "mongoose";
 export interface UserI extends Document{
     name: string;
     readonly password: string;
-    selleter: boolean;
+    seller: boolean;
     address: AddressI;
     create_at: Date;
 }

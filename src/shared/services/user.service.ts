@@ -41,4 +41,9 @@ export class UserService {
         return this.sanitizeUser(user);
     }
 
+    public async findByPayload(payload: any){
+        const { name } = payload;
+        return await this.userModel.findOne({name});
+    }
+
 }
