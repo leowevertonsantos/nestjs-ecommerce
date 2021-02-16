@@ -39,5 +39,5 @@ Nest is [MIT licensed](LICENSE).
 
 
 
-Project created to learn how to code with nestjs, this case is based in youtube tutorial by https://www.youtube.com/channel/UCUSpT2b4x2Bq3RcAAg4hFng and based is the follow playlist https://www.youtube.com/watch?v=-8Q62rTswSQ&list=PLBeQxJQNprbiykCyVNcSExTgytMMjSjnQ
+Project created to learn how to code with nestjs, this case is based in youtube tutorial by https://www.youtube.com/channel/UCUSpT2b4x2Bq3RcAAg4hFng and based in the follow playlist https://www.youtube.com/watch?v=-8Q62rTswSQ&list=PLBeQxJQNprbiykCyVNcSExTgytMMjSjnQ
 
